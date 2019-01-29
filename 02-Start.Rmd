@@ -9,15 +9,15 @@ Help on picking an operating system and installing basic tools.
 ### Windows
 Though disparaged by most professional Bioinformaticians, you can still do a lot with Windows. Most commercial GUIs run on Windows. Web based applications are generally system agnostic, though many run better in Chrome or Firefox.
 
-A Downside to Windows is that it greatly restricts the programs you can run. Almost all Bioinformatics tools are designed on and for the Linux command line. Plus there are numerous command line tools that allow you multiple ways to access your data. 
+A Downside to Windows is that it greatly restricts the programs you can run. Almost all Bioinformatics tools are designed on and for the Linux command line. Plus there are numerous command line tools that allow you multiple ways to access your data.
 
 On Windows 10, you can actually install Linux as an application. Directions for doing so can be found [here](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/).
 
 A hugely important tool in Bioinformatics is R. You should install [R](https://www.r-project.org/) and [R Studio](https://www.rstudio.com/).
 
-You can also use Windows to connect to the HPC, or some other Linux server. There are multiple applications for this, a recommended one is [MobaXterm](https://mobaxterm.mobatek.net/). 
+You can also use Windows to connect to the HPC, or some other Linux server. There are multiple applications for this, a recommended one is [MobaXterm](https://mobaxterm.mobatek.net/).
 
-If you are doing work directly on your Windows machine, you should also install git. You can do this either by installing [git bash](https://gitforwindows.org/), or by installing [MobaXterm](https://mobaxterm.mobatek.net/) and then adding a git [plugin](https://mobaxterm.mobatek.net/plugins.html). 
+If you are doing work directly on your Windows machine, you should also install git. You can do this either by installing [git bash](https://gitforwindows.org/), or by installing [MobaXterm](https://mobaxterm.mobatek.net/) and then adding a git [plugin](https://mobaxterm.mobatek.net/plugins.html).
 
 
 ### Mac OS
@@ -29,13 +29,13 @@ A hugely important tool in Bioinformatics is R. You should install [R](https://w
 
 ### Linux
 
-Awesome, you're pretty much good to go. 
+Awesome, you're pretty much good to go.
 
 A hugely important tool in Bioinformatics is R. You should install [R](https://www.r-project.org/) and [R Studio](https://www.rstudio.com/).
 
 ### HPC
 
-WVU has a High Performance Cluster open to all WVU community members. To use the hpc, you will need an account; information on obtaining an account is [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Getting_Access). More information about using the hpc can be found [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Research_Computing).
+WVU has a High Performance Cluster open to all WVU community members. To use the hpc, you will need an account; information on obtaining an account is [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Getting_Access). More information about using the hpc can be found [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Research_Computing), or in Chapter \@ref(hpc).
 
 
 
@@ -45,4 +45,4 @@ WVU has a High Performance Cluster open to all WVU community members. To use the
 
 You're going to need a text editor, for programming, editing metadata files, and occasionally looking at data files. Please note, WORD IS NOT A TEXT EDITOR. Word processors will add a lot of other things to the file besides the plain text. These extra things will choke any other program that tries to read the file. On Windows, also avoid notepad. You can do much better.
 
-"What's the best text editor?" can bring out some strong opinions. The Emacs vs vi religious wars are legendary. Built into most Linux system are Emacs and vi (or vim), and nano. Nano is the simplest, but does the least. The others can do much more, but are confusing for beginners. It is good to know at least a few vi basics, as it will be on any Linux system you encounter. However, unless you really want to go old school hard core, I would suggest a more modern editor. [Sublime](https://www.sublimetext.com/) and [Atom](https://atom.io) are widely used, amazingly powerful, and available on all platforms. Other favorites include [Notepad++](https://notepad-plus-plus.org/) (Windows) and [BBEdit](https://www.barebones.com/products/bbedit/) (Mac).  
+"What's the best text editor?" can bring out some strong opinions. The Emacs vs vi religious wars are legendary. Built into most Linux system are Emacs and vi (or vim), and nano. Nano is the simplest, but does the least. The others can do much more, but are confusing for beginners. It is good to know at least a few vi basics, as it will be on any Linux system you encounter. However, unless you really want to go old school hard core, I would suggest a more modern editor. [Sublime](https://www.sublimetext.com/) and [Atom](https://atom.io) are widely used, amazingly powerful, and available on all platforms. Other favorites include [Notepad++](https://notepad-plus-plus.org/) (Windows) and [BBEdit](https://www.barebones.com/products/bbedit/) (Mac).

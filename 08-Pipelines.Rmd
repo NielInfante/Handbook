@@ -1,0 +1,18 @@
+# Pipelines {#pipeline}
+
+Here we present some of the workflows we commonly use. Note that you will have to make some modifications to get them to run on your setup, at the very least changing paths. Also note the date a workflow was last updated. Bioinformatics changes rapidly, and new tools and methods are constantly being developed.
+
+RNA-seq
+September 2018
+
+RNA-seq without a reference
+September 2018
+
+16S Microbiome
+September 2018
+
+Variant Finding
+September 2018
+
+ChIP-seq
+September 2018

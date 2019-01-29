@@ -1,0 +1,3 @@
+# Assessing New Tools {#tools}
+
+How to determine if you should adopt a new tool.

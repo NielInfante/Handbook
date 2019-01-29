@@ -1,0 +1,3 @@
+# Writing About Bioinformatics {#writting}
+
+How to write methods sections.
