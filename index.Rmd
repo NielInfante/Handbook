@@ -10,6 +10,10 @@ link-citations: yes
 description: "A handbook on best practices and recommendations for doing Bioinformatics at WVU."
 ---
 
+# Introduction {#intro}
+
+
+Welcome to the Wild and Wonderful world of Bioinformatics. Having control of your data, and knowing how to manipulate and mine it, is the only way you can get to what you really want to know. Learning how to access your data, filter it, and combine it with other data will allow you to bring your subject area expertise to bear, and will open up insights into your system.
 
 
 
