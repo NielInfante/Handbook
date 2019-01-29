@@ -1,5 +1,9 @@
 # Introduction {#intro}
 
+
+Welcome to the Wild and Wonderful world of Bioinformatics. Having control of your data, and knowing how to manipulate and mine it, is the only way you can get to what you really want to know. Learning how to access your data, filter it, and combine it with other data will allow you to bring your subject area expertise to bear, and will open up insights into your system.
+
+
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
