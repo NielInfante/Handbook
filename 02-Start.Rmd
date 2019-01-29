@@ -1,0 +1,4 @@
+# Getting Started
+
+Help on picking an operating system and installing basic tools.
+
