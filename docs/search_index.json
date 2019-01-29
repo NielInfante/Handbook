@@ -7,8 +7,8 @@
 ["software.html", "Chapter 6 Software", " Chapter 6 Software "],
 ["version.html", "Chapter 7 Version Tracking", " Chapter 7 Version Tracking "],
 ["pipeline.html", "Chapter 8 Pipelines", " Chapter 8 Pipelines Here we present some of the workflows we commonly use. Note that you will have to make some modifications to get them to run on your setup, at the very least changing paths. Also note the date a workflow was last updated. Bioinformatics changes rapidly, and new tools and methods are constantly being developed. RNA-seq September 2018 RNA-seq without a reference September 2018 16S Microbiome September 2018 Variant Finding September 2018 ChIP-seq September 2018 "],
-["documentation-documentation.html", "Chapter 9 Documentation ${documentation}", " Chapter 9 Documentation ${documentation} "],
-["using-the-hpc-hpc.html", "Chapter 10 Using the HPC #{hpc}", " Chapter 10 Using the HPC #{hpc} "],
-["assessing-new-tools-tools.html", "Chapter 11 Assessing New Tools ${tools}", " Chapter 11 Assessing New Tools ${tools} How to determine if you should adopt a new tool. "],
-["writing-about-bioinformatics-writting.html", "Chapter 12 Writing About Bioinformatics #{writting}", " Chapter 12 Writing About Bioinformatics #{writting} How to write methods sections. "]
+["documentation.html", "Chapter 9 Documentation", " Chapter 9 Documentation "],
+["hpc.html", "Chapter 10 Using the HPC", " Chapter 10 Using the HPC "],
+["tools.html", "Chapter 11 Assessing New Tools", " Chapter 11 Assessing New Tools How to determine if you should adopt a new tool. "],
+["writting.html", "Chapter 12 Writing About Bioinformatics", " Chapter 12 Writing About Bioinformatics How to write methods sections. "]
 ]
