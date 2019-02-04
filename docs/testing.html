@@ -157,6 +157,81 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>For instance,</p>
 <div id="flowchart" class="section level2">
 <h2><span class="header-section-number">14.1</span> Flowchart</h2>
+<p>Some stuff here.</p>
+<span class="math display">\[\begin{equation}
+    \sum x_{i}
+
+    \begin{tikzpicture}[-latex]
+    \matrix (chart)
+
+    [
+      matrix of nodes,
+      column sep      = 3em,
+      row sep         = 5ex,
+      column 1/.style = {nodes={decision}},
+      column 2/.style = {nodes={env}}
+    ]
+
+      {
+      |[root]| Formula           &amp;                 \\
+      single-line?               &amp; equation        \\
+      centered?                  &amp; gather          \\
+      aligned at relation sign?  &amp; align, flalign  \\
+      aligned at several places? &amp; alignat         \\
+      first left, centered,
+        last right?              &amp; multline        \\
+                        &amp; &amp; |[decision]| numbered? \\
+                  &amp; &amp; |[treenode]| Add a \texttt{*}
+                                 &amp; |[finish]| Done \\
+    };
+
+
+ \draw
+    (chart-1-1) edge (chart-2-1)
+    \foreach \x/\y in {2/3, 3/4, 4/5, 5/6} {
+      (chart-\x-1) \no (chart-\y-1) }
+    \foreach \x in {2,...,6} {
+       (chart-\x-1) \yes (chart-\x-2) }
+   (chart-7-3) \no  (chart-8-3)
+   (chart-8-3) edge (chart-8-4);
+
+
+ \draw
+   (chart-6-1) -- +(-2,0) |- (chart-1-1)
+     node[near start,sloped,above] {no, reconsider};
+
+     \foreach \x in {2,...,6} {
+   \draw (chart-\x-2) -| (chart-7-3);}
+
+
+\draw   (chart-7-3)  -| (chart-8-4)
+   node[near start,above] {yes};
+
+   \end{tikzpicture}
+
+
+\end{equation}\]</span>
+<pre><code>$$
+
+\begin{split}
+\mathrm{Var}(\hat{\beta}) &amp; =\mathrm{Var}((X&#39;X)^{-1}X&#39;y)\\
+ &amp; =(X&#39;X)^{-1}X&#39;\mathrm{Var}(y)((X&#39;X)^{-1}X&#39;)&#39;\\
+ &amp; =(X&#39;X)^{-1}X&#39;\mathrm{Var}(y)X(X&#39;X)^{-1}\\
+ &amp; =(X&#39;X)^{-1}X&#39;\sigma^{2}IX(X&#39;X)^{-1}\\
+ &amp; =(X&#39;X)^{-1}\sigma^{2}
+\end{split}
+
+$$</code></pre>
+<span class="math display" id="eq:align">\[\begin{align*} 
+g(X_{n}) &amp;= g(\theta)+g&#39;({\tilde{\theta}})(X_{n}-\theta) \notag \\
+\sqrt{n}[g(X_{n})-g(\theta)] &amp;= g&#39;\left({\tilde{\theta}}\right)
+  \sqrt{n}[X_{n}-\theta ] \tag{14.1}
+\end{align*}\]</span>
+
+<div class="theorem">
+<span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 14.1  (Pythagorean theorem)  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the length of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the other two sides, we have <span class="math display">\[a^2 + b^2 = c^2\]</span>
+</div>
+<p></p>
 
 <div id="refs" class="references">
 <div>
@@ -219,6 +294,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

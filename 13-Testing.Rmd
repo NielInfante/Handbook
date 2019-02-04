@@ -6,3 +6,94 @@ For instance,
 
 ## Flowchart
 
+
+
+Some stuff here.
+
+\begin{equation}
+	\sum x_{i}
+
+	\begin{tikzpicture}[-latex]
+	\matrix (chart)
+
+    [
+      matrix of nodes,
+      column sep      = 3em,
+      row sep         = 5ex,
+      column 1/.style = {nodes={decision}},
+      column 2/.style = {nodes={env}}
+    ]
+
+      {
+      |[root]| Formula           &                 \\
+      single-line?               & equation        \\
+      centered?                  & gather          \\
+      aligned at relation sign?  & align, flalign  \\
+      aligned at several places? & alignat         \\
+      first left, centered,
+        last right?              & multline        \\
+                        & & |[decision]| numbered? \\
+                  & & |[treenode]| Add a \texttt{*}
+                                 & |[finish]| Done \\
+    };
+
+
+ \draw
+    (chart-1-1) edge (chart-2-1)
+    \foreach \x/\y in {2/3, 3/4, 4/5, 5/6} {
+      (chart-\x-1) \no (chart-\y-1) }
+    \foreach \x in {2,...,6} {
+       (chart-\x-1) \yes (chart-\x-2) }
+   (chart-7-3) \no  (chart-8-3)
+   (chart-8-3) edge (chart-8-4);
+
+
+ \draw
+   (chart-6-1) -- +(-2,0) |- (chart-1-1)
+     node[near start,sloped,above] {no, reconsider};
+
+     \foreach \x in {2,...,6} {
+   \draw (chart-\x-2) -| (chart-7-3);}
+
+
+\draw   (chart-7-3)  -| (chart-8-4)
+   node[near start,above] {yes};
+
+   \end{tikzpicture}
+
+
+\end{equation}
+
+
+```
+$$
+
+\begin{split}
+\mathrm{Var}(\hat{\beta}) & =\mathrm{Var}((X'X)^{-1}X'y)\\
+ & =(X'X)^{-1}X'\mathrm{Var}(y)((X'X)^{-1}X')'\\
+ & =(X'X)^{-1}X'\mathrm{Var}(y)X(X'X)^{-1}\\
+ & =(X'X)^{-1}X'\sigma^{2}IX(X'X)^{-1}\\
+ & =(X'X)^{-1}\sigma^{2}
+\end{split}
+
+$$
+```
+
+
+
+\begin{align*} 
+g(X_{n}) &= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) \notag \\
+\sqrt{n}[g(X_{n})-g(\theta)] &= g'\left({\tilde{\theta}}\right)
+  \sqrt{n}[X_{n}-\theta ] (\#eq:align)
+\end{align*} 
+
+
+
+
+```{theorem, name="Pythagorean theorem"}
+For a right triangle, if $c$ denotes the length of the hypotenuse
+and $a$ and $b$ denote the lengths of the other two sides, we have
+$$a^2 + b^2 = c^2$$
+```
+
+
