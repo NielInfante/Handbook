@@ -25,7 +25,7 @@
 <meta name="author" content="Niel Infante">
 
 
-<meta name="date" content="2019-02-04">
+<meta name="date" content="2019-02-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.0/htmlwidgets.js"></script>
+<script src="libs/viz-0.3/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.0/grViz.js"></script>
 
 
 <style type="text/css">
@@ -158,59 +162,43 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="flowchart" class="section level2">
 <h2><span class="header-section-number">14.1</span> Flowchart</h2>
 <p>Some stuff here.</p>
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="Handbook_files/figure-html/unnamed-chunk-2-1.png" alt="Some caption." width="90%" />
+<p class="caption">
+Figure 14.1: Some caption.
+</p>
+</div>
+<div id="htmlwidget-59d6e00feaf3e5c04da0" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-59d6e00feaf3e5c04da0">{"x":{"diagram":"\ndigraph blorts {\n      \nnode [fontname = Helvetica]\n\ninput     [label = \"Input Fastq\", shape=oval, color=red, alpha=0.5, style=filled]\nfastqc    [label = \"FastQC\", shape=square]\nmulti     [label = \"MultiQC\", shape=square]\nqual      [label = \"Quality\nOverview\", shape=oval]\nref       [label = \"Reference\nTranscriptome\", shape=oval]\nsalmon    [label = \"Salmon\", shape=square]\nquant     [label = \"Quantification Files\n(quant.sf)\", shape=oval]\ndeseq     [label = \"DESeq2\", shape=square]\ndds       [label = \"dds.Rds\", shape=oval]\ndiff      [label = \"Differential Expression\", shape=oval, color=green, style=filled]\n\n\ninput -> fastqc\nfastqc -> multi\nmulti -> qual\nfastqc -> salmon\nref -> salmon\nsalmon -> quant\nquant -> deseq\ndeseq -> dds\ndeseq -> diff\n\n\n}      ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <span class="math display">\[\begin{equation}
     \sum x_{i}
-
-    \begin{tikzpicture}[-latex]
-    \matrix (chart)
-
-    [
-      matrix of nodes,
-      column sep      = 3em,
-      row sep         = 5ex,
-      column 1/.style = {nodes={decision}},
-      column 2/.style = {nodes={env}}
-    ]
-
-      {
-      |[root]| Formula           &amp;                 \\
-      single-line?               &amp; equation        \\
-      centered?                  &amp; gather          \\
-      aligned at relation sign?  &amp; align, flalign  \\
-      aligned at several places? &amp; alignat         \\
-      first left, centered,
-        last right?              &amp; multline        \\
-                        &amp; &amp; |[decision]| numbered? \\
-                  &amp; &amp; |[treenode]| Add a \texttt{*}
-                                 &amp; |[finish]| Done \\
-    };
-
-
- \draw
-    (chart-1-1) edge (chart-2-1)
-    \foreach \x/\y in {2/3, 3/4, 4/5, 5/6} {
-      (chart-\x-1) \no (chart-\y-1) }
-    \foreach \x in {2,...,6} {
-       (chart-\x-1) \yes (chart-\x-2) }
-   (chart-7-3) \no  (chart-8-3)
-   (chart-8-3) edge (chart-8-4);
-
-
- \draw
-   (chart-6-1) -- +(-2,0) |- (chart-1-1)
-     node[near start,sloped,above] {no, reconsider};
-
-     \foreach \x in {2,...,6} {
-   \draw (chart-\x-2) -| (chart-7-3);}
-
-
-\draw   (chart-7-3)  -| (chart-8-4)
-   node[near start,above] {yes};
-
-   \end{tikzpicture}
-
-
 \end{equation}\]</span>
+<p><img src="Handbook_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="Handbook_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<pre><code>#```{r, echo=FALSE, engine=&#39;tikz&#39;, out.width=&#39;90%&#39;, fig.ext=if (knitr:::is_latex_output()) &#39;pdf&#39; else &#39;png&#39;, fig.cap=&#39;Some caption.&#39;}
+\begin{document}
+
+\begin{tikzpicture}[node distance=2cm]
+
+\node (start) [startstop] {Start};
+\node (in1) [io, below of=start] {Input};
+\node (pro1) [process, below of=in1] {Process 1};
+\node (dec1) [decision, below of=pro1, yshift=-0.5cm] {Decision 1};
+\node (pro2a) [process, below of=dec1, yshift=-0.5cm] {Process 2a text text text text text text text text text text};
+\node (pro2b) [process, right of=dec1, xshift=2cm] {Process 2b};
+\node (out1) [io, below of=pro2a] {Output};
+\node (stop) [startstop, below of=out1] {Stop};
+
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (pro1);
+\draw [arrow] (pro1) -- (dec1);
+\draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
+\draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
+\draw [arrow] (pro2b) |- (pro1);
+\draw [arrow] (pro2a) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+\end{tikzpicture}
+</code></pre>
 <pre><code>$$
 
 \begin{split}
@@ -222,16 +210,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 \end{split}
 
 $$</code></pre>
-<span class="math display" id="eq:align">\[\begin{align*} 
+<span class="math display" id="eq:align">\[\begin{align} 
 g(X_{n}) &amp;= g(\theta)+g&#39;({\tilde{\theta}})(X_{n}-\theta) \notag \\
 \sqrt{n}[g(X_{n})-g(\theta)] &amp;= g&#39;\left({\tilde{\theta}}\right)
   \sqrt{n}[X_{n}-\theta ] \tag{14.1}
-\end{align*}\]</span>
+\end{align}\]</span>
 
 <div class="theorem">
-<span id="thm:unnamed-chunk-2" class="theorem"><strong>Theorem 14.1  (Pythagorean theorem)  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the length of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the other two sides, we have <span class="math display">\[a^2 + b^2 = c^2\]</span>
+<span id="thm:unnamed-chunk-5" class="theorem"><strong>Theorem 14.1  (Pythagorean theorem)  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the length of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the other two sides, we have <span class="math display">\[a^2 + b^2 = c^2\]</span>
 </div>
-<p></p>
+
 
 <div id="refs" class="references">
 <div>

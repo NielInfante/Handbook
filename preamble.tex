@@ -1,23 +1,18 @@
 \usepackage{booktabs}
 
 
+
+\usepackage[utf8]{inputenc}
 \usepackage{tikz}
-\usetikzlibrary{matrix,calc,shapes}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
 
-\tikzset{
-  treenode/.style = {shape=rectangle, rounded corners,
-                     draw, anchor=center,
-                     text width=5em, align=center,
-                     top color=white, bottom color=blue!20,
-                     inner sep=1ex},
-  decision/.style = {treenode, diamond, inner sep=0pt},
-  root/.style     = {treenode, font=\Large,
-                     bottom color=red!30},
-  env/.style      = {treenode, font=\ttfamily\normalsize},
-  finish/.style   = {root, bottom color=green!40},
-  dummy/.style    = {circle,draw}
-}
 
 \newcommand{\yes}{edge node [above] {yes}}
 \newcommand{\no}{edge  node [left]  {no}}
