@@ -25,7 +25,7 @@
 <meta name="author" content="Niel Infante">
 
 
-<meta name="date" content="2019-02-05">
+<meta name="date" content="2019-02-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="writting.html">
-
+<link rel="next" href="a-case-study.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -129,12 +129,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="8" data-path="version.html"><a href="version.html"><i class="fa fa-check"></i><b>8</b> Version Tracking</a></li>
 <li class="chapter" data-level="9" data-path="pipeline.html"><a href="pipeline.html"><i class="fa fa-check"></i><b>9</b> Pipelines</a></li>
 <li class="chapter" data-level="10" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>10</b> Documentation</a></li>
-<li class="chapter" data-level="11" data-path="start.html"><a href="start.html#hpc"><i class="fa fa-check"></i><b>11</b> Using the HPC</a></li>
+<li class="chapter" data-level="11" data-path="hpc-chapt.html"><a href="hpc-chapt.html"><i class="fa fa-check"></i><b>11</b> Using the HPC</a></li>
 <li class="chapter" data-level="12" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>12</b> Assessing New Tools</a></li>
 <li class="chapter" data-level="13" data-path="writting.html"><a href="writting.html"><i class="fa fa-check"></i><b>13</b> Writing About Bioinformatics</a></li>
 <li class="chapter" data-level="14" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>14</b> Testing</a><ul>
 <li class="chapter" data-level="14.1" data-path="testing.html"><a href="testing.html#flowchart"><i class="fa fa-check"></i><b>14.1</b> Flowchart</a></li>
 </ul></li>
+<li class="chapter" data-level="15" data-path="a-case-study.html"><a href="a-case-study.html"><i class="fa fa-check"></i><b>15</b> A Case Study</a><ul>
+<li class="chapter" data-level="15.1" data-path="a-case-study.html"><a href="a-case-study.html#set-up-the-project-folder-and-repo"><i class="fa fa-check"></i><b>15.1</b> Set up the project folder and repo</a></li>
+<li class="chapter" data-level="15.2" data-path="a-case-study.html"><a href="a-case-study.html#get-the-data"><i class="fa fa-check"></i><b>15.2</b> Get the data</a></li>
+<li class="chapter" data-level="15.3" data-path="a-case-study.html"><a href="a-case-study.html#do-qc"><i class="fa fa-check"></i><b>15.3</b> Do QC</a></li>
+<li class="chapter" data-level="15.4" data-path="a-case-study.html"><a href="a-case-study.html#quantification"><i class="fa fa-check"></i><b>15.4</b> Quantification</a></li>
+<li class="chapter" data-level="15.5" data-path="a-case-study.html"><a href="a-case-study.html#differential-expression"><i class="fa fa-check"></i><b>15.5</b> Differential Expression</a></li>
+<li class="chapter" data-level="15.6" data-path="a-case-study.html"><a href="a-case-study.html#go-gsea-pathway"><i class="fa fa-check"></i><b>15.6</b> GO, GSEA, pathway</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>16</b> Bibliography</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -168,8 +177,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 Figure 14.1: Some caption.
 </p>
 </div>
-<div id="htmlwidget-59d6e00feaf3e5c04da0" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-59d6e00feaf3e5c04da0">{"x":{"diagram":"\ndigraph blorts {\n      \nnode [fontname = Helvetica]\n\ninput     [label = \"Input Fastq\", shape=oval, color=red, alpha=0.5, style=filled]\nfastqc    [label = \"FastQC\", shape=square]\nmulti     [label = \"MultiQC\", shape=square]\nqual      [label = \"Quality\nOverview\", shape=oval]\nref       [label = \"Reference\nTranscriptome\", shape=oval]\nsalmon    [label = \"Salmon\", shape=square]\nquant     [label = \"Quantification Files\n(quant.sf)\", shape=oval]\ndeseq     [label = \"DESeq2\", shape=square]\ndds       [label = \"dds.Rds\", shape=oval]\ndiff      [label = \"Differential Expression\", shape=oval, color=green, style=filled]\n\n\ninput -> fastqc\nfastqc -> multi\nmulti -> qual\nfastqc -> salmon\nref -> salmon\nsalmon -> quant\nquant -> deseq\ndeseq -> dds\ndeseq -> diff\n\n\n}      ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-cfeedbee4760c479ee9e" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cfeedbee4760c479ee9e">{"x":{"diagram":"\ndigraph blorts {\n      \nnode [fontname = Helvetica]\n\ninput     [label = \"Input Fastq\", shape=oval, color=red, alpha=0.5, style=filled]\nfastqc    [label = \"FastQC\", shape=square]\nmulti     [label = \"MultiQC\", shape=square]\nqual      [label = \"Quality\nOverview\", shape=oval]\nref       [label = \"Reference\nTranscriptome\", shape=oval]\nsalmon    [label = \"Salmon\", shape=square]\nquant     [label = \"Quantification Files\n(quant.sf)\", shape=oval]\ndeseq     [label = \"DESeq2\", shape=square]\ndds       [label = \"dds.Rds\", shape=oval]\ndiff      [label = \"Differential Expression\", shape=oval, color=green, style=filled]\n\n\ninput -> fastqc\nfastqc -> multi\nmulti -> qual\nfastqc -> salmon\nref -> salmon\nsalmon -> quant\nquant -> deseq\ndeseq -> dds\ndeseq -> diff\n\n\n}      ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <span class="math display">\[\begin{equation}
     \sum x_{i}
 \end{equation}\]</span>
@@ -221,14 +230,6 @@ g(X_{n}) &amp;= g(\theta)+g&#39;({\tilde{\theta}})(X_{n}-\theta) \notag \\
 </div>
 
 
-<div id="refs" class="references">
-<div>
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/" class="uri">http://yihui.name/knitr/</a>.</p>
-</div>
-<div>
-<p>———. 2018. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown" class="uri">https://CRAN.R-project.org/package=bookdown</a>.</p>
-</div>
-</div>
 </div>
 </div>
             </section>
@@ -236,8 +237,8 @@ g(X_{n}) &amp;= g(\theta)+g&#39;({\tilde{\theta}})(X_{n}-\theta) \notag \\
           </div>
         </div>
       </div>
-<a href="writting.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="writting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a-case-study.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

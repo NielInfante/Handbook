@@ -35,7 +35,7 @@ A hugely important tool in Bioinformatics is R. You should install [R](https://w
 
 ### HPC
 
-WVU has a High Performance Cluster open to all WVU community members. To use the hpc, you will need an account; information on obtaining an account is [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Getting_Access). More information about using the hpc can be found [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Research_Computing), or in Chapter \@ref(hpc).
+WVU has a High Performance Cluster open to all WVU community members. To use the hpc, you will need an account; information on obtaining an account is [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Getting_Access). More information about using the hpc can be found [here](https://wiki.hpc.wvu.edu/hpc_wiki/index.php/Research_Computing), or in Chapter \@ref(hpc_chapt).
 
 
 

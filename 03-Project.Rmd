@@ -1,12 +1,14 @@
 # Project Management {#project}
 
-here are many variants on this design, feel free to modify to suit your needs. However, the basic structure of what will be presented will help you in the long run.
+There are many variants on this design, feel free to modify to suit your needs. However, the basic structure of what will be presented will help you in the long run.
 
 Each project should have its own directory. Note I will use directory and folder interchangeably. Your project directory should contain a README file, which explains the purpose of the project, and what you have done. Within the directory, there should be multiple sub folders. First is data, where you will store the raw data for the project. The data in this folder should never be written to or modified. I also will have a reference directory, where I will store the reference genome, transcriptome, or other data obtained from external databases. It is good to store this data with the project, so that you can be assured you will always have access to the same version of the data. This may not be practical for large databases (eg blast nr), so take care to note database versions in your scripts. You should have a folder, traditionally called src, which contains all the scripts and source code you write for the project. All external software should be installed in a folder called bin. More on this in Chapter \@ref(software).
 
 For each analysis you do, or each tool you run, there should be an output directory for it which contains all the output from the analysis. It may be useful to further subdivide each of these folders into more subfolders, with different sorts of data.
 
 Also in this top level directory you should have you .git folder. This will be generated when you use git (Chapter \@ref(git)). Note that all you really want under version control is the README and the src directory. There are no versions for the raw data, and all the derived data should be coming directly from a script.
+
+Good info here [@10.1371/journal.pcbi.1005510]
 
 
 _Describe Folder layout, nameing conventions, other things from good enough practices. link to that too._

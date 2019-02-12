@@ -25,7 +25,7 @@
 <meta name="author" content="Niel Infante">
 
 
-<meta name="date" content="2019-02-05">
+<meta name="date" content="2019-02-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.0/htmlwidgets.js"></script>
+<script src="libs/viz-0.3/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.0/grViz.js"></script>
 
 
 <style type="text/css">
@@ -125,12 +129,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="8" data-path="version.html"><a href="version.html"><i class="fa fa-check"></i><b>8</b> Version Tracking</a></li>
 <li class="chapter" data-level="9" data-path="pipeline.html"><a href="pipeline.html"><i class="fa fa-check"></i><b>9</b> Pipelines</a></li>
 <li class="chapter" data-level="10" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>10</b> Documentation</a></li>
-<li class="chapter" data-level="11" data-path="start.html"><a href="start.html#hpc"><i class="fa fa-check"></i><b>11</b> Using the HPC</a></li>
+<li class="chapter" data-level="11" data-path="hpc-chapt.html"><a href="hpc-chapt.html"><i class="fa fa-check"></i><b>11</b> Using the HPC</a></li>
 <li class="chapter" data-level="12" data-path="tools.html"><a href="tools.html"><i class="fa fa-check"></i><b>12</b> Assessing New Tools</a></li>
 <li class="chapter" data-level="13" data-path="writting.html"><a href="writting.html"><i class="fa fa-check"></i><b>13</b> Writing About Bioinformatics</a></li>
 <li class="chapter" data-level="14" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>14</b> Testing</a><ul>
 <li class="chapter" data-level="14.1" data-path="testing.html"><a href="testing.html#flowchart"><i class="fa fa-check"></i><b>14.1</b> Flowchart</a></li>
 </ul></li>
+<li class="chapter" data-level="15" data-path="a-case-study.html"><a href="a-case-study.html"><i class="fa fa-check"></i><b>15</b> A Case Study</a><ul>
+<li class="chapter" data-level="15.1" data-path="a-case-study.html"><a href="a-case-study.html#set-up-the-project-folder-and-repo"><i class="fa fa-check"></i><b>15.1</b> Set up the project folder and repo</a></li>
+<li class="chapter" data-level="15.2" data-path="a-case-study.html"><a href="a-case-study.html#get-the-data"><i class="fa fa-check"></i><b>15.2</b> Get the data</a></li>
+<li class="chapter" data-level="15.3" data-path="a-case-study.html"><a href="a-case-study.html#do-qc"><i class="fa fa-check"></i><b>15.3</b> Do QC</a></li>
+<li class="chapter" data-level="15.4" data-path="a-case-study.html"><a href="a-case-study.html#quantification"><i class="fa fa-check"></i><b>15.4</b> Quantification</a></li>
+<li class="chapter" data-level="15.5" data-path="a-case-study.html"><a href="a-case-study.html#differential-expression"><i class="fa fa-check"></i><b>15.5</b> Differential Expression</a></li>
+<li class="chapter" data-level="15.6" data-path="a-case-study.html"><a href="a-case-study.html#go-gsea-pathway"><i class="fa fa-check"></i><b>15.6</b> GO, GSEA, pathway</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>16</b> Bibliography</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -153,12 +166,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="project" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Project Management</h1>
-<p>here are many variants on this design, feel free to modify to suit your needs. However, the basic structure of what will be presented will help you in the long run.</p>
+<p>There are many variants on this design, feel free to modify to suit your needs. However, the basic structure of what will be presented will help you in the long run.</p>
 <p>Each project should have its own directory. Note I will use directory and folder interchangeably. Your project directory should contain a README file, which explains the purpose of the project, and what you have done. Within the directory, there should be multiple sub folders. First is data, where you will store the raw data for the project. The data in this folder should never be written to or modified. I also will have a reference directory, where I will store the reference genome, transcriptome, or other data obtained from external databases. It is good to store this data with the project, so that you can be assured you will always have access to the same version of the data. This may not be practical for large databases (eg blast nr), so take care to note database versions in your scripts. You should have a folder, traditionally called src, which contains all the scripts and source code you write for the project. All external software should be installed in a folder called bin. More on this in Chapter <a href="software.html#software">7</a>.</p>
 <p>For each analysis you do, or each tool you run, there should be an output directory for it which contains all the output from the analysis. It may be useful to further subdivide each of these folders into more subfolders, with different sorts of data.</p>
 <p>Also in this top level directory you should have you .git folder. This will be generated when you use git (Chapter <a href="git.html#git">6</a>). Note that all you really want under version control is the README and the src directory. There are no versions for the raw data, and all the derived data should be coming directly from a script.</p>
+<p>Good info here <span class="citation">(Wilson et al. <a href="#ref-10.1371/journal.pcbi.1005510">2017</a>)</span></p>
 <p><em>Describe Folder layout, nameing conventions, other things from good enough practices. link to that too.</em></p>
 
+</div>
+<h3> Bibliography</h3>
+<div id="refs" class="references">
+<div id="ref-10.1371/journal.pcbi.1005510">
+<p>Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “Good Enough Practices in Scientific Computing.” <em>PLOS Computational Biology</em> 13 (6). Public Library of Science: 1–20. doi:<a href="https://doi.org/10.1371/journal.pcbi.1005510">10.1371/journal.pcbi.1005510</a>.</p>
+</div>
 </div>
             </section>
 

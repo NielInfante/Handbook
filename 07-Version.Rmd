@@ -1,2 +1,6 @@
 # Version Tracking {#version}
 
+Here I am talking about version control of the different tools you use.
+
+Talk about Conda.
+
