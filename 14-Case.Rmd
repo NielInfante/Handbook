@@ -1,0 +1,40 @@
+# A Case Study
+
+Lets take a simple RNA seq experiment and follow the steps from start to finish.
+
+## Set up the project folder and repo
+
+
+
+## Get the data
+
+Should I do this with Agazie data?  Project ID 22934923
+
+Its Human RNA, its old. Check with him, it may be published by now.
+
+Use getFastq.R to get data
+
+## Do QC
+
+fastqc and multiqc
+
+## Quantification
+
+Get transcripts, merge them, get IDs
+
+conda salmon
+  build index
+  do quantification
+
+## Differential Expression
+
+DESeq2
+
+
+## GO, GSEA, pathway
+
+
+
+
+
+
