@@ -22,19 +22,23 @@ git push -u origin master
 You now have your project inititalized and connected to a github repository.
 
 
-## Get the data
+### Get the data
 
 Should I do this with Agazie data?  Project ID 22934923
+
+I will be getting the data from BaseSpace. See \@ref(basespace). The project ID is 22934923. This is a Human RNA seq experiment, explaination here **Link to paper, if available**.
+
+
 
 Its Human RNA, its old. Check with him, it may be published by now.
 
 Use getFastq.R to get data
 
-## Do QC
+### Do QC
 
 fastqc and multiqc
 
-## Quantification
+### Quantification
 
 Get transcripts, merge them, get IDs
 
@@ -42,9 +46,9 @@ conda salmon
   build index
   do quantification
 
-## Differential Expression
+### Differential Expression
 
 DESeq2
 
 
-## GO, GSEA, pathway
+### GO, GSEA, pathway
