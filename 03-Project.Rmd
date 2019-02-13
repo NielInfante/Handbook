@@ -19,6 +19,9 @@ Also in this top level directory you should have you .git folder. This will be g
 | Data | Folder | Other data needed for the project, such as reference genomes or annotation files |
 | src | Folder | All the scripts written for the project |
 | Tool_1 | Folder | Output from running tool 1 |
+| Tool_2 | Folder | Output from running tool 2 |
+| project.Rproj | File | If you are doing the project as an R project, this file should be in the base directory |
+
 
 
 
@@ -26,4 +29,4 @@ Also in this top level directory you should have you .git folder. This will be g
 Good info here [@10.1371/journal.pcbi.1005510]
 
 
-_Describe Folder layout, nameing conventions, other things from good enough practices. link to that too._
+_Describe Folder layout, naming conventions, other things from good enough practices. link to that too._
