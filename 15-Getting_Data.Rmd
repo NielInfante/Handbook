@@ -1,0 +1,42 @@
+# Getting Data {#getting}
+
+There's lots of data out there, some of it your own.  How do you get it somewhere you can compute on it? This chapter will tell.
+
+
+## BaseSpace {#basespace}
+
+
+If your sequencing was done at WVU or Marshall (or plenty of other places), you will get your data via Illumina's [BaseSpace](https://basespace.illumina.com). 
+
+For each sequencing run, BaseSpace will produce both a _run_ and a _project_. The run is primarily for running the machine, and diagnosing technical problems. We are mainly interested in the project. There are many ways to get the data from BaseSpace. If your project is small, you can click through to each sample, and download it manually. This is tedious. You can install the BaseSpace download program, which will allow to download the whole project. I find this slow, and prone to breaking mid downloading. A third method is to use a script and an access token.
+
+Instructions for obtaining an access token:
+
+*Need Help*
+
+*python script*
+
+*R script*
+
+
+
+
+
+
+Explain ownership.
+
+
+
+## GEO
+
+## TCGA
+
+## SRA
+
+## Your collaborator
+
+### ftp
+### Globus
+### Google Drive
+
+
