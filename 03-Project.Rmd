@@ -8,6 +8,21 @@ For each analysis you do, or each tool you run, there should be an output direct
 
 Also in this top level directory you should have you .git folder. This will be generated when you use git (Chapter \@ref(git)). Note that all you really want under version control is the README and the src directory. There are no versions for the raw data, and all the derived data should be coming directly from a script.
 
+
+### Directory Setup
+
+| Name        | File/Folder           | Use  |
+| ------------- |:-------------:| -----:|
+| README.md     |File | An overview of what the project is, and a history of what you've done |
+| meta      | File      |   Metadata about the samples |
+| reads  |  Folder  | All the sequence files |
+| Data | Folder | Other data needed for the project, such as reference genomes or annotation files |
+| src | Folder | All the scripts written for the project |
+| Tool_1 | Folder | Output from running tool 1 |
+
+
+
+
 Good info here [@10.1371/journal.pcbi.1005510]
 
 
