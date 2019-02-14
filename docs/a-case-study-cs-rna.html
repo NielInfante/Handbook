@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 9 Pipelines | Doing Bioinformatics at WVU</title>
+  <title>Chapter 15 A Case Study {cs_RNA} | Doing Bioinformatics at WVU</title>
   <meta name="description" content="A handbook on best practices and recommendations for doing Bioinformatics at WVU.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 9 Pipelines | Doing Bioinformatics at WVU" />
+  <meta property="og:title" content="Chapter 15 A Case Study {cs_RNA} | Doing Bioinformatics at WVU" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Pipelines | Doing Bioinformatics at WVU" />
+  <meta name="twitter:title" content="Chapter 15 A Case Study {cs_RNA} | Doing Bioinformatics at WVU" />
   
   <meta name="twitter:description" content="A handbook on best practices and recommendations for doing Bioinformatics at WVU." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="version.html">
-<link rel="next" href="documentation.html">
+<link rel="prev" href="testing.html">
+<link rel="next" href="getting.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -137,13 +137,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="14" data-path="testing.html"><a href="testing.html"><i class="fa fa-check"></i><b>14</b> Testing</a><ul>
 <li class="chapter" data-level="14.1" data-path="testing.html"><a href="testing.html#flowchart"><i class="fa fa-check"></i><b>14.1</b> Flowchart</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="cs-RNA.html"><a href="cs-RNA.html"><i class="fa fa-check"></i><b>15</b> A Case Study</a><ul>
-<li class="chapter" data-level="" data-path="cs-RNA.html"><a href="cs-RNA.html#csrna_setup"><i class="fa fa-check"></i>Set up the project folder and repo</a></li>
-<li class="chapter" data-level="" data-path="cs-RNA.html"><a href="cs-RNA.html#csrna_getData"><i class="fa fa-check"></i>Get the data</a></li>
-<li class="chapter" data-level="" data-path="cs-RNA.html"><a href="cs-RNA.html#csrna_doQC"><i class="fa fa-check"></i>Do QC</a></li>
-<li class="chapter" data-level="" data-path="cs-RNA.html"><a href="cs-RNA.html#csrna_quant"><i class="fa fa-check"></i>Quantification</a></li>
-<li class="chapter" data-level="" data-path="cs-RNA.html"><a href="cs-RNA.html#csrna_diff"><i class="fa fa-check"></i>Differential Expression</a></li>
-<li class="chapter" data-level="" data-path="cs-RNA.html"><a href="cs-RNA.html#csrna_go"><i class="fa fa-check"></i>GO, GSEA, pathway</a></li>
+<li class="chapter" data-level="15" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html"><i class="fa fa-check"></i><b>15</b> A Case Study {cs_RNA}</a><ul>
+<li class="chapter" data-level="" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html#csrna_setup"><i class="fa fa-check"></i>Set up the project folder and repo</a></li>
+<li class="chapter" data-level="" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html#csrna_getData"><i class="fa fa-check"></i>Get the data</a></li>
+<li class="chapter" data-level="" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html#csrna_doQC"><i class="fa fa-check"></i>Do QC</a></li>
+<li class="chapter" data-level="" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html#csrna_quant"><i class="fa fa-check"></i>Quantification</a></li>
+<li class="chapter" data-level="" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html#csrna_diff"><i class="fa fa-check"></i>Differential Expression</a></li>
+<li class="chapter" data-level="" data-path="a-case-study-cs-rna.html"><a href="a-case-study-cs-rna.html#csrna_go"><i class="fa fa-check"></i>GO, GSEA, pathway</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="getting.html"><a href="getting.html"><i class="fa fa-check"></i><b>16</b> Getting Data</a><ul>
 <li class="chapter" data-level="16.1" data-path="getting.html"><a href="getting.html#basespace"><i class="fa fa-check"></i><b>16.1</b> BaseSpace</a></li>
@@ -156,16 +156,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="16.5.3" data-path="getting.html"><a href="getting.html#google-drive"><i class="fa fa-check"></i><b>16.5.3</b> Google Drive</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="sharing.html"><a href="sharing.html"><i class="fa fa-check"></i><b>17</b> Sharing Data</a><ul>
-<li class="chapter" data-level="17.1" data-path="sharing.html"><a href="sharing.html#sra-1"><i class="fa fa-check"></i><b>17.1</b> SRA</a></li>
-<li class="chapter" data-level="17.2" data-path="sharing.html"><a href="sharing.html#geo-1"><i class="fa fa-check"></i><b>17.2</b> GEO</a></li>
-<li class="chapter" data-level="17.3" data-path="sharing.html"><a href="sharing.html#google-drive-1"><i class="fa fa-check"></i><b>17.3</b> Google Drive</a></li>
-<li class="chapter" data-level="17.4" data-path="sharing.html"><a href="sharing.html#figshare"><i class="fa fa-check"></i><b>17.4</b> figshare</a></li>
-<li class="chapter" data-level="17.5" data-path="sharing.html"><a href="sharing.html#doi"><i class="fa fa-check"></i><b>17.5</b> doi</a></li>
-<li class="chapter" data-level="17.6" data-path="sharing.html"><a href="sharing.html#me"><i class="fa fa-check"></i><b>17.6</b> Me</a></li>
-<li class="chapter" data-level="17.7" data-path="sharing.html"><a href="sharing.html#your-collaborator-1"><i class="fa fa-check"></i><b>17.7</b> Your collaborator</a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>18</b> Bibliography</a></li>
+<li class="chapter" data-level="17" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i><b>17</b> Bibliography</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -186,23 +177,52 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pipeline" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Pipelines</h1>
-<p>Here we present some of the workflows we commonly use. Note that you will have to make some modifications to get them to run on your setup, at the very least changing paths. Also note the date a workflow was last updated. Bioinformatics changes rapidly, and new tools and methods are constantly being developed.</p>
-<p>RNA-seq September 2018</p>
-<p>RNA-seq without a reference September 2018</p>
-<p>16S Microbiome September 2018</p>
-<p>Variant Finding September 2018</p>
-<p>ChIP-seq September 2018</p>
+<div id="a-case-study-cs_rna" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> A Case Study {cs_RNA}</h1>
+<p>Lets take a simple RNA seq experiment and follow the steps from start to finish.</p>
+<div id="csrna_setup" class="section level3 unnumbered">
+<h3>Set up the project folder and repo</h3>
+<p>First, I navigate to my projects folder. Now, since this will be an RNA seq project, I clone the RNA seq template from github:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">git</span> clone --depth 1 https://github.com/NielInfante/RNAseq.git Case_study_2019_02</code></pre></div>
+<p>This will create the folder Case_study_2019_02, and copy everything from the template repository into it. The depth flag tells git that you only want the latest code, without all the revision history, to save a little space and time.</p>
+<p>Now go to github and create a repository called Case_study_2019_02, and use the option to create a repo from an existing repository. Do not initialize with a README.</p>
+<p>Then:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">git</span> remote add origin https://github.com/NielInfante/Case_study_2019_02.git
+<span class="fu">git</span> push -u origin master</code></pre></div>
+<p>You now have your project inititalized and connected to a github repository.</p>
+</div>
+<div id="csrna_getData" class="section level3 unnumbered">
+<h3>Get the data</h3>
+<p>Should I do this with Agazie data? Project ID 22934923</p>
+<p>I will be getting the data from BaseSpace. See <a href="getting.html#basespace">16.1</a>. The project ID is 22934923. This is a Human RNA seq experiment, explaination here <strong>Link to paper, if available</strong>.</p>
+<p>Its Human RNA, its old. Check with him, it may be published by now.</p>
+<p>Use getFastq.R to get data</p>
+</div>
+<div id="csrna_doQC" class="section level3 unnumbered">
+<h3>Do QC</h3>
+<p>fastqc and multiqc</p>
+</div>
+<div id="csrna_quant" class="section level3 unnumbered">
+<h3>Quantification</h3>
+<p>Get transcripts, merge them, get IDs</p>
+<p>conda salmon build index do quantification</p>
+</div>
+<div id="csrna_diff" class="section level3 unnumbered">
+<h3>Differential Expression</h3>
+<p>DESeq2</p>
+</div>
+<div id="csrna_go" class="section level3 unnumbered">
+<h3>GO, GSEA, pathway</h3>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="version.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="documentation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="getting.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -241,8 +261,9 @@ gitbook.start({
 },
 "download": ["Handbook.pdf", "Handbook.epub"],
 "toc": {
+"collapse": "subsection"
+},
 "collapse": "section"
-}
 });
 });
 </script>

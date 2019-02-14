@@ -1,11 +1,11 @@
-# A Case Study
+# A Case Study {#cs_RNA}
 
 Lets take a simple RNA seq experiment and follow the steps from start to finish.
 
-### Set up the project folder and repo
+### Set up the project folder and repo {-#csrna_setup}
 
 First, I navigate to my projects folder. Now, since this will be an RNA seq project, I clone the RNA seq template from github:
-```{sh}
+```{sh eval=F}
 git clone --depth 1 https://github.com/NielInfante/RNAseq.git Case_study_2019_02
 ```
 
@@ -14,7 +14,7 @@ This will create the folder Case_study_2019_02, and copy everything from the tem
 Now go to github and create a repository called Case_study_2019_02, and use the option to create a repo from an existing repository. Do not initialize with a README.
 
 Then:
-```{sh}
+```{sh eval=F}
 git remote add origin https://github.com/NielInfante/Case_study_2019_02.git
 git push -u origin master
 ```
@@ -22,7 +22,7 @@ git push -u origin master
 You now have your project inititalized and connected to a github repository.
 
 
-### Get the data
+### Get the data {-#csrna_getData}
 
 Should I do this with Agazie data?  Project ID 22934923
 
@@ -34,11 +34,11 @@ Its Human RNA, its old. Check with him, it may be published by now.
 
 Use getFastq.R to get data
 
-### Do QC
+### Do QC {-#csrna_doQC}
 
 fastqc and multiqc
 
-### Quantification
+### Quantification {-#csrna_quant}
 
 Get transcripts, merge them, get IDs
 
@@ -46,9 +46,9 @@ conda salmon
   build index
   do quantification
 
-### Differential Expression
+### Differential Expression {-#csrna_diff}
 
 DESeq2
 
 
-### GO, GSEA, pathway
+### GO, GSEA, pathway {-#csrna_go}
