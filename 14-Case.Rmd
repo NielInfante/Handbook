@@ -13,7 +13,7 @@ This will create the folder Case_study_2019_02, and copy everything from the tem
 
 Now go to github and create a repository called Case_study_2019_02, and use the option to create a repo from an existing repository. Do not initialize with a README.
 
-Then:
+Then, using your github ID and the name you want for the project:
 ```{sh eval=F}
 git remote add origin https://github.com/NielInfante/Case_study_2019_02.git
 git push -u origin master
@@ -34,6 +34,21 @@ Its Human RNA, its old. Check with him, it may be published by now.
 
 Use getFastq.R to get data
 
+### Create Conda Environment {-csrna_conda}
+
+Find the versions that you want. You should install specific versions (generally the latest), and keep track of the version for reproducibility purposes. Copying the conda create command to your readme will record this.
+
+```{sh eval=F}
+conda search fastqc
+conda search multiqc
+conda search salmon
+
+conda create -n case_study_2019_02 fastqc=0.11.8 multiqc=1.7 salmon=0.12.0
+
+
+
+
+```
 ### Do QC {-#csrna_doQC}
 
 fastqc and multiqc
