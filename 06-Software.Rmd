@@ -1,2 +1,5 @@
 # Software {#software}
 
+
+
+For conda, occationally do conda clean --all. This will free up some disk space, remove unused stuff.
