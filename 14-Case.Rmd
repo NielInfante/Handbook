@@ -21,6 +21,18 @@ git push -u origin master
 
 You now have your project inititalized and connected to a github repository.
 
+If the above gives you an error, you can try:
+```{sh eval=F}
+rm -rf .git
+git init
+git add -A
+git commit -a -m 'Initial Commit'
+git remote add origin https://github.com/NielInfante/Case_study_2019_02.git
+git push -u origin master
+```
+
+
+
 
 ### Get the data {-#csrna_getData}
 
