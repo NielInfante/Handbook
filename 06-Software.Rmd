@@ -1,5 +1,41 @@
 # Software {#software}
 
+Help on how to install and manage tools.
 
 
-For conda, occationally do conda clean --all. This will free up some disk space, remove unused stuff.
+## Conda
+
+The easiest and most reproducible way I've found to do software installations is using [Conda](https://docs.conda.io/projects/conda/en/latest/index.html), and its extension [BioConda](https://daler.github.io/bioconda-docs/). The [BioConda](https://daler.github.io/bioconda-docs/) link has a good explaination on how to install, so I'm not going to repeat it. Go there for instructions. The basic steps are to install Miniconda (or Anaconda if you prefer, I recommend Miniconda). Then set up channels. These are repositories of tools you will be able to install. When you want to install a tool, conda will search these repositories, and return the first one it finds with the name you give. It is important to add the bioconda channel last, as this will then be the first repository searched.
+
+Conda works by creating envirnoments to work in. By default, once you install conda it creates a base environment which you will be in unless you specify a different one. To install into the base environment you simply name to tool you want:
+
+```{sh eval=F}
+conda install samtools
+```
+
+However, tools can have different versions, or clashing dependencies. So you want to create environments. Its very straightforward:
+
+```{sh eval=F}
+conda create -n QC fastqc multiqc
+```
+
+This creates an environment called QC. To use the tools you have installed into this environment, you have to activate it:
+
+```{sh eval=F}
+
+conda activate QC
+
+* do the stuff you want to do *
+
+conda deactivate
+```
+
+
+For conda, occationally do 
+```{sh eval=F}
+conda clean --all
+```
+This will free up some disk space, and remove unused stuff.
+
+
+
